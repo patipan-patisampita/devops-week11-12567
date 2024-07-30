@@ -17,7 +17,7 @@ connect.getConnection(function (err, conn) {
             console.log('ERRORR connected database',err)
         }
 
-        console.log('Connected database successfully', rows)
+        console.log('Connected database successfully')
     });
 
     // Don't forget to release the connection when finished!
