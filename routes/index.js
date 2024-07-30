@@ -3,11 +3,12 @@ const router = express.Router()
 
 const db = require('../config/db')
 
-router.get('/users', (req, res) => {
+//Get :http://localhost:3000/user
+router.get('/', (req, res) => {
     // For pool initialization, see above
     db.query('SELECT * FROM users', function (err, rows) {
         if (err) {
-            console.log(err)
+            console.log('ERROR fetching data from users table',err)
             return
         }
 
